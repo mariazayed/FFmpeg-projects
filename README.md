@@ -54,7 +54,7 @@ Read more about [PSNR](https://www.ffmpeg.org/ffmpeg-all.html#psnr)
     ```sh
     ffmpeg -i input.mp4 -c:v libx265 -b:v <bitrate> ouput.mp4
     ```
-    **<bitrate> is a variable to be specified**
+    **`<bitrate>` is a variable to be specified**
 * PSNR of the output file as compared to the original file 
      ```sh
     ffmpeg -i input.mp4 -i output.mp4 -filter_complex "psnr" -f null –
