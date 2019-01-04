@@ -61,7 +61,7 @@ Read more about [PSNR](https://www.ffmpeg.org/ffmpeg-all.html#psnr)
     ```
 2. Plot the resulted two rate distortion curve by fitting the measured values for each of the codecs. 
 
-# Project3
+# Project3 (stream a stored video using HTTP protocol)
 
 #### *Used OS:* **Ubuntu 18.04.1**
 
@@ -108,12 +108,11 @@ Change file owner of /opt/lampp directory. username should be the username of yo
 # The tools: FFmpeg and MP4Box
 Two tools will be used. **FFmpeg** to prepare the video content, and **MP4Box** to segment the file and create a Media Presentation Description (MPD).
 
-# Project description and steps 
-The goal of this project is to stream a stored video using HTTP protocol. 
+# Steps 
 To complete the project do the following:
 1. *Download a video from the internet*
 2. *Setup a webserver server and test it using localhost (127.0.0.1)*
-3. *Use the MP4Box software tool to produce DASH compatible video stream; manifest (.mpd) and video files (.m4s)  and store these files in the root directory of the webserver*
+3. *Use the MP4Box software tool to produce DASH compatible video stream; manifest (.mpd) and video files (.m4s)  and store these files in the root directory of the webserver*<br>
     **Preparing the video file**
     ```sh
     ffmpeg -i input.mp4 -c:v libx264 -preset slow -x264-params keyint=96:min-keyint=96 output1.264
@@ -135,6 +134,7 @@ To complete the project do the following:
     | output1.264 | The H.264/AVC raw video we want to put in a mp4. |
     | -fps 24 | Specifies the framerate |
     | output2.mp4 | The output file name |
+    
     What follows is the step to actual create the segments and the corresponding MPD.
      ```sh
     MP4Box -dash 4000 -frag 4000 -rap -segment-name segment_ output2.mp4
@@ -145,7 +145,8 @@ To complete the project do the following:
     | -frag 4000 | Creates subsegments within segments and the duration therefore must be longer than the duration given to -dash. By setting it to the same value, there will only one subsegment per segment |
     | -rap | Forces segments to start random access points, i.e. keyframes. Segment duration may vary due to where keyframes are in the video |
     | -segment-name segment_ | The name of the segments. An increasing number and the file extension is added automatically. So in this case, the segments will be named like this: segment_1.m4s, segment_2.m4s, … |
-    | output2.mp4 | The video we have created just before which should be segmented |<br>
+    | output2.mp4 | The video we have created just before which should be segmented |
+    
     **The output is one video representation, in form of segments. Additionally, there is one initialization segment, called output2.mp4. Finally, there is a MPD**
 4. *Create a blank webpage and add the JavaScript player*
      ```
