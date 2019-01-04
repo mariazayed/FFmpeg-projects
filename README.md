@@ -65,7 +65,7 @@ Read more about [PSNR](https://www.ffmpeg.org/ffmpeg-all.html#psnr)
 
 #### *Used OS:* **Ubuntu 18.04.1**
 
-# Pre-requirements:
+## Pre-requirements:
 ### Setup a webserver (XAMPP for example)
 * download [XAMPP for Linux](https://www.apachefriends.org/index.html)
 * open the downloads folder and right-click on the installed file
