@@ -125,7 +125,7 @@ To complete the project do the following:
     | keyint=96 | Sets the minimum interval between keyframes. We achieve a constant segment length by setting minimum and maximum keyframe interval to the same value |
     | output1.264 | Specifies the output filename. File extension is .264 as it is a raw H.264/AVC stream. |
     
-    **Segmenting**
+    **Segmenting**<br>
     Now we add the previously created h264 raw video to an mp4 container as this is our container format of choice.
      ```sh
     MP4Box -add output1.264 -fps 24 output2.mp4
@@ -135,7 +135,6 @@ To complete the project do the following:
     | output1.264 | The H.264/AVC raw video we want to put in a mp4. |
     | -fps 24 | Specifies the framerate |
     | output2.mp4 | The output file name |
-    <br>
     What follows is the step to actual create the segments and the corresponding MPD.
      ```sh
     MP4Box -dash 4000 -frag 4000 -rap -segment-name segment_ output2.mp4
