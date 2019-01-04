@@ -105,10 +105,10 @@ Change file owner of /opt/lampp directory. username should be the **{your-user-n
 * sudo apt update
 * sudo apt install ffmpeg
 
-# The tools: FFmpeg and MP4Box
+## The tools: FFmpeg and MP4Box
 Two tools will be used. **FFmpeg** to prepare the video content, and **MP4Box** to segment the file and create a Media Presentation Description (MPD).
 
-# Steps 
+## Steps 
 To complete the project do the following:
 1. *Download a video from the internet*
 2. *Setup a webserver server and test it using localhost (127.0.0.1)*
