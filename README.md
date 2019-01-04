@@ -29,7 +29,7 @@ Download from [here](https://www.ffmpeg.org/download.html)
 ```sh
 ffmpeg -i input.mp4 -qp <int> output.mp4
 ```
-`<int>` is a number from 0 to 63
+`<int>` is a number from 0 to 51
 QP "quantizaer" is a number, the smaller the number the higher in the quality, the higher the quality the higher the file size (i.e, 0 is the highest [quality lossless compression] and 63 is the lowest quality)
 
  ##### Bit rate finding
