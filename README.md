@@ -134,7 +134,8 @@ To complete the project do the following:
     | ------ | ------ |
     | output1.264 | The H.264/AVC raw video we want to put in a mp4. |
     | -fps 24 | Specifies the framerate |
-    | output2.mp4 | The output file name |<br>
+    | output2.mp4 | The output file name |
+    <br>
     What follows is the step to actual create the segments and the corresponding MPD.
      ```sh
     MP4Box -dash 4000 -frag 4000 -rap -segment-name segment_ output2.mp4
