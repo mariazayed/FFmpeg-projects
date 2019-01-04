@@ -90,10 +90,12 @@ Change file owner of /opt/lampp directory. username should be the username of yo
 * sudo chown -hR  {your-user-name}:root /opt/lampp
 * sudo gedit /opt/lampp/etc/httpd.conf
     - edit the following lines
-        > <IfModule unixd_module>
-        >    User nobody
-        >    Group nogroup
-        > </IfModule>
+        ```
+         <IfModule unixd_module>
+            User nobody
+            Group nogroup
+         </IfModule>
+        ```
 * restart xampp
 
 
@@ -146,7 +148,8 @@ To complete the project do the following:
     | output2.mp4 | The video we have created just before which should be segmented |
     **The output is one video representation, in form of segments. Additionally, there is one initialization segment, called output2.mp4. Finally, there is a MPD**
 4. *Create a blank webpage and add the JavaScript player*
-    ><script
+     ```
+    <script
     src="http://cdn.dashjs.org/latest/dash.all.min.js">
     </script>
     <h4> DASH.js Player Demo </h4>
@@ -159,5 +162,5 @@ To complete the project do the following:
     <video data-dashjs-player
     src="output2_dash.mpd" controls></video>
     </div>
-
+     ```
 5. *Use any internet browser to view the webpage locally and play the video*
