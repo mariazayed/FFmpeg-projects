@@ -134,7 +134,7 @@ To complete the project do the following:
     | ------ | ------ |
     | output1.264 | The H.264/AVC raw video we want to put in a mp4. |
     | -fps 24 | Specifies the framerate |
-    | output2.mp4 | The output file name |
+    | output2.mp4 | The output file name |<br>
     What follows is the step to actual create the segments and the corresponding MPD.
      ```sh
     MP4Box -dash 4000 -frag 4000 -rap -segment-name segment_ output2.mp4
@@ -145,7 +145,7 @@ To complete the project do the following:
     | -frag 4000 | Creates subsegments within segments and the duration therefore must be longer than the duration given to -dash. By setting it to the same value, there will only one subsegment per segment |
     | -rap | Forces segments to start random access points, i.e. keyframes. Segment duration may vary due to where keyframes are in the video |
     | -segment-name segment_ | The name of the segments. An increasing number and the file extension is added automatically. So in this case, the segments will be named like this: segment_1.m4s, segment_2.m4s, … |
-    | output2.mp4 | The video we have created just before which should be segmented |
+    | output2.mp4 | The video we have created just before which should be segmented |<br>
     **The output is one video representation, in form of segments. Additionally, there is one initialization segment, called output2.mp4. Finally, there is a MPD**
 4. *Create a blank webpage and add the JavaScript player*
      ```
