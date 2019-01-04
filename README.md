@@ -86,7 +86,7 @@ Run the following commands..
 * test the server using [localhost](http://localhost/dashboard/)
 
 ### Change the permissions of the root directory of the server 
-Change file owner of /opt/lampp directory. username should be the username of your new documentroot folder ownername
+Change file owner of /opt/lampp directory. username should be the **{your-user-name}** of your new document root folder ownername
 * sudo chown -hR  {your-user-name}:root /opt/lampp
 * sudo gedit /opt/lampp/etc/httpd.conf
     - edit the following lines
