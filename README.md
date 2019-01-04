@@ -115,7 +115,7 @@ To complete the project do the following:
 3. *Use the MP4Box software tool to produce DASH compatible video stream; manifest (.mpd) and video files (.m4s)  and store these files in the root directory of the webserver*<br>
     **Preparing the video file**
     ```sh
-    ffmpeg -i input.mp4 -c:v libx264 -preset slow -x264-params keyint=96:min-keyint=96 output1.264
+    ffmpeg -i input.mp4 -c:v libx264 -b:v <bitrate> -preset slow -x264-params keyint=96:min-keyint=96 output1.264
     ```
     | Parameter | Explanation |
     | ------ | ------ |
